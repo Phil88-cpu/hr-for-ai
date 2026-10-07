@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: ai-hr-department
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: RESEND_API_KEY
+        sync: false
+      - key: DEMO_TOKEN
+        sync: false
+      - key: HR_EMAIL
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
+      - key: CAT_URL
+        value: https://raw.githubusercontent.com/philsinclair/ai-hr-department/main/public/keyboard-warrior-cat.svg

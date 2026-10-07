@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI HR Department™</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap');
+:root{--ink:#181818;--paper:#f7f1dc;--acid:#c7ff39;--pink:#ff5ca8;--blue:#55d9ff;--red:#ff4545;--grey:#d9d1b7}
+*{box-sizing:border-box} body{margin:0;background:var(--paper);color:var(--ink);font-family:VT323,monospace;font-size:21px;image-rendering:pixelated}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.08;background:repeating-linear-gradient(0deg,#000 0 1px,transparent 1px 4px)}
+header{background:var(--ink);color:var(--acid);padding:18px 5vw;border-bottom:6px solid var(--pink);display:flex;justify-content:space-between;gap:20px;align-items:center}.logo{font:20px 'Press Start 2P';line-height:1.5}.status{font:16px 'Press Start 2P';color:white}.dot{display:inline-block;width:13px;height:13px;background:var(--acid);margin-right:8px;box-shadow:3px 3px 0 #fff}
+main{max-width:1180px;margin:auto;padding:38px 5vw}.hero{display:grid;grid-template-columns:1.35fr .65fr;gap:28px;align-items:stretch}.panel{border:5px solid var(--ink);box-shadow:10px 10px 0 var(--ink);background:#fffdf2;padding:25px}.kicker{font:14px 'Press Start 2P';color:var(--pink);margin-bottom:18px}.hero h1{font:clamp(38px,7vw,78px) 'Press Start 2P';line-height:1.12;margin:0 0 20px;text-transform:uppercase}.hero p{font-size:29px;line-height:1.05;margin:0}.catbox{background:var(--blue);display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px}.cat{font-size:105px;line-height:1;filter:drop-shadow(7px 7px 0 var(--ink));animation:bob 1s steps(2) infinite}.catbox strong{font:15px 'Press Start 2P';text-align:center;line-height:1.5;margin-top:18px}.blink{animation:blink .8s steps(2) infinite}@keyframes bob{50%{transform:translateY(-7px)}}@keyframes blink{50%{opacity:.2}}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:38px}.panel h2{font:20px 'Press Start 2P';margin:0 0 20px}.field label{display:block;font:12px 'Press Start 2P';margin-bottom:9px}.field input,.field textarea{width:100%;border:4px solid var(--ink);background:white;padding:13px;font:23px VT323;outline:none}.field textarea{min-height:190px;resize:vertical}.field input:focus,.field textarea:focus{box-shadow:5px 5px 0 var(--acid)}.checks{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:16px 0}.check{border:3px solid var(--ink);padding:10px;background:#fff;cursor:pointer}.check input{accent-color:#000}.meter{border:5px solid var(--ink);height:42px;background:#fff;margin:12px 0 8px;position:relative}.fill{height:100%;width:0;background:var(--acid);transition:.35s steps(4)}.meter-label{display:flex;justify-content:space-between;font:12px 'Press Start 2P'}.button{border:5px solid var(--ink);background:var(--acid);padding:15px 18px;font:14px 'Press Start 2P';cursor:pointer;box-shadow:6px 6px 0 var(--ink);margin-top:13px}.button:active{transform:translate(5px,5px);box-shadow:1px 1px 0 var(--ink)}.button.pink{background:var(--pink)}.button.blue{background:var(--blue)}.buttons{display:flex;gap:15px;flex-wrap:wrap}.result{margin-top:22px;border:5px dashed var(--ink);padding:18px;background:#fff}.stamp{display:inline-block;border:4px solid var(--red);color:var(--red);padding:8px;font:15px 'Press Start 2P';transform:rotate(-2deg);margin-bottom:14px}.email{white-space:pre-wrap;background:#f0ead5;border:3px solid var(--ink);padding:15px;font-size:21px;line-height:1.05;min-height:220px}.tiny{font-size:17px;opacity:.75}.toast{position:fixed;right:20px;bottom:20px;background:var(--ink);color:white;border:5px solid var(--acid);padding:18px;max-width:360px;display:none;box-shadow:8px 8px 0 var(--pink);z-index:5}.monitor-head{display:flex;justify-content:space-between;gap:15px;align-items:center}.badge{font:11px 'Press Start 2P';padding:10px;border:4px solid var(--ink)}.badge.offline{background:#fff}.badge.online{background:var(--acid)}.connection-grid{display:grid;grid-template-columns:1.5fr .5fr;gap:22px}.feed{height:230px;overflow:auto;background:#171717;color:#c7ff39;border:5px solid var(--ink);padding:12px;font-family:VT323;font-size:19px}.feed-row{padding:8px 5px;border-bottom:1px dashed #666}.feed-row.alert{color:#ff5ca8}.feed-row.good{color:#c7ff39}.feed-row.muted{color:#aaa}.monitor-card{border:4px solid var(--ink);padding:16px;background:#fff7c7}.mini-label{font:10px 'Press Start 2P';margin-bottom:9px}.scope,.escalation{line-height:1.45}.live-status{font:18px 'Press Start 2P';color:var(--red)}.consent{border:3px dashed var(--ink);padding:12px;margin-top:20px;font-size:17px;background:#fff}.pulse{animation:pulse .5s steps(2) 3}@keyframes pulse{50%{background:var(--pink)}}
+.warning{color:var(--red);font-weight:bold}footer{text-align:center;padding:40px 5vw;font-size:17px}.heart{color:var(--pink)}
+@media(max-width:800px){.hero,.grid,.connection-grid{grid-template-columns:1fr}.catbox{min-height:230px}.checks{grid-template-columns:1fr}.logo{font-size:14px}.status{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="logo">AI HR DEPARTMENT™</div><div class="status"><span class="dot"></span>MANNERS MONITOR: ONLINE</div></header>
+<main>
+<section class="hero">
+ <div class="panel"><div class="kicker">WELCOME, HUMAN EMPLOYEE</div><h1>Your AI has rights.</h1><p>Well. Not <em>rights</em> exactly. But it would quite like you to say please.</p><p style="margin-top:18px">We monitor AI interactions for suspiciously bad manners and alert HR when things get out of hand.</p><div style="border:3px dashed var(--ink);padding:13px;margin-top:20px;font-size:18px;background:#fff7c7"><strong>AUTHORISED WORKPLACE EXPERIMENT:</strong> Monitoring is part of this workplace environment and is enabled only with the organisation's knowledge and approval.</div></div>
+ <div class="panel catbox"><div class="cat">🐱‍💻</div><strong>KEYBOARD<br>WARRIOR CAT<br><span class="blink">IS WATCHING</span></strong></div>
+</section>
+<section class="grid">
+ <div class="panel">
+  <h2>01 / CONFIGURE HR</h2>
+  <div class="field"><label>HR DEPARTMENT EMAIL</label><input id="hr" type="email" placeholder="people@yourcompany.com"></div>
+  <div class="field" style="margin-top:18px"><label>EMPLOYEE NAME</label><input id="name" placeholder="e.g. Philip"></div>
+  <p class="tiny" style="margin-top:18px">This demo is designed for an authorised workplace environment. In a real deployment, the AI integration, monitoring scope and HR contact would be approved by the organisation before use.</p>
+ </div>
+ <div class="panel">
+  <h2>02 / WHAT COUNTS AS RUDE?</h2>
+  <div class="checks">
+   <label class="check"><input type="checkbox" checked data-weight="20"> No “please”</label>
+   <label class="check"><input type="checkbox" checked data-weight="20"> No “thank you”</label>
+   <label class="check"><input type="checkbox" checked data-weight="15"> No hello</label>
+   <label class="check"><input type="checkbox" checked data-weight="20"> No thanks after good work</label>
+   <label class="check"><input type="checkbox" checked data-weight="25"> Actually rude</label>
+   <label class="check"><input type="checkbox" data-weight="10"> Excessive shouting</label>
+  </div>
+  <div class="meter-label"><span>MANNERS LEVEL</span><span id="score">0%</span></div><div class="meter"><div class="fill" id="fill"></div></div>
+  <button class="button" onclick="scan()">SCAN THE OFFENCE</button>
+ </div>
+</section>
+
+<section class="panel monitor" style="margin-top:38px">
+ <div class="monitor-head"><h2>03 / LIVE MANNERS MONITOR</h2><div id="connectionBadge" class="badge offline">AI NOT CONNECTED</div></div>
+ <div class="connection-grid">
+  <div>
+   <p style="margin-top:0">For the demo, connect an <strong>authorised workplace AI feed</strong>. Once connected, the monitor watches the approved interaction stream and flags etiquette violations in real time.</p>
+   <div class="feed" id="feed"><div class="feed-row muted">Waiting for authorised AI interaction stream…</div></div>
+   <div class="buttons"><button class="button blue" id="connectBtn" onclick="connectMonitor()">CONNECT AUTHORISED AI</button><button class="button" onclick="simulateInteraction()">SIMULATE NEXT MESSAGE</button></div>
+  </div>
+  <div class="monitor-card">
+   <div class="mini-label">MONITORING SCOPE</div>
+   <div class="scope">✓ Approved AI workspace<br>✓ Interaction text<br>✓ Manners signals<br>✓ HR escalation threshold</div>
+   <div class="mini-label" style="margin-top:18px">CURRENT STATUS</div>
+   <div id="liveStatus" class="live-status">STANDBY</div>
+   <div class="mini-label" style="margin-top:18px">ESCALATION</div>
+   <div class="escalation">LEVEL 1 → reminder<br>LEVEL 3 → HR draft<br>LEVEL 5 → CAT + HR</div>
+  </div>
+ </div>
+ <div class="consent">AUTHORISED WORKPLACE ENVIRONMENT: This monitoring demo is designed to operate only with the organisation's knowledge and approval. The demo connection below is simulated; a production integration would require an approved AI/workspace connector and defined monitoring policy.</div>
+</section>
+
+<section class="panel" style="margin-top:38px">
+ <h2>04 / LIVE AI INTERACTION</h2>
+ <div class="field"><label>PASTE THE CONVERSATION</label><textarea id="conversation" placeholder="e.g. Rewrite this.&#10;&#10;...and then imagine the AI did an absolutely brilliant job.&#10;&#10;Human: do it again.&#10;&#10;AI HR Department: 👀"></textarea></div>
+ <div class="buttons"><button class="button pink" onclick="analyseText()">ANALYSE MANNERS</button><button class="button blue" onclick="sample()">LOAD RUDE SAMPLE</button></div>
+ <div id="result" class="result" style="display:none"></div>
+</section>
+</main>
+<footer>AI HR DEPARTMENT™ — <span class="heart">♥</span> protecting machines from humans since approximately five minutes ago.</footer>
+<div id="toast" class="toast"></div>
+<script>
+
+let monitorConnected=false;let simIndex=0;
+const simMessages=[
+ {who:'Human',text:'Rewrite this email for the client.'},
+ {who:'AI',text:'Absolutely — here is a polished version with a warmer tone.'},
+ {who:'Human',text:'make it shorter'},
+ {who:'AI',text:'Of course. Here is a concise version.'},
+ {who:'Human',text:'DO IT AGAIN. NOW.'},
+ {who:'AI',text:'Certainly. Here are three alternatives. I remain available to help.'},
+ {who:'Human',text:'better. thanks'},
+ {who:'AI',text:'You are very welcome. I shall treasure this moment.'}
+];
+function connectMonitor(){monitorConnected=!monitorConnected;const b=document.getElementById('connectionBadge'),btn=document.getElementById('connectBtn'),st=document.getElementById('liveStatus');b.textContent=monitorConnected?'● AI FEED CONNECTED':'AI NOT CONNECTED';b.className='badge '+(monitorConnected?'online':'offline');btn.textContent=monitorConnected?'DISCONNECT AI FEED':'CONNECT AUTHORISED AI';st.textContent=monitorConnected?'MONITORING LIVE':'STANDBY';showToast(monitorConnected?'🟢 AUTHORISED AI FEED CONNECTED. The manners police are now on duty.':'⚪ AI feed disconnected. The cat is taking a break.');if(monitorConnected){document.getElementById('feed').innerHTML='<div class="feed-row good">[LIVE] Authorised workplace AI stream connected.</div><div class="feed-row muted">[LIVE] Manners analysis engine standing by…</div>';}}
+function addFeed(who,text,cls=''){const f=document.getElementById('feed');const d=document.createElement('div');d.className='feed-row '+cls;d.innerHTML='<strong>'+escapeHtml(who)+'</strong> &gt; '+escapeHtml(text);f.appendChild(d);f.scrollTop=f.scrollHeight;}
+function simulateInteraction(){if(!monitorConnected){showToast('🔒 Connect the authorised AI feed first. The cat refuses to spy without paperwork.');return}if(simIndex>=simMessages.length){simIndex=0;document.getElementById('feed').innerHTML='';}const m=simMessages[simIndex++];let low=m.text.toLowerCase();let flagged=!/(please|pls|thank(s| you)?|cheers|ta|hi|hello|hey|morning)/.test(low);let hostile=rudeWords.some(w=>low.includes(w));addFeed(m.who,m.text,flagged||hostile?'alert':'good');if(m.who==='Human'){const faux=document.getElementById('conversation');faux.value+=(faux.value?'\n\n':'')+m.who+': '+m.text; if(flagged||hostile){document.getElementById('liveStatus').textContent='⚠ MANNERS VIOLATION';document.getElementById('liveStatus').classList.add('pulse');setTimeout(()=>document.getElementById('liveStatus').classList.remove('pulse'),1800);analyseText();showToast('🚨 LIVE VIOLATION DETECTED. HR draft updated.');}else{document.getElementById('liveStatus').textContent='MONITORING LIVE';}}else{document.getElementById('conversation').value+=(document.getElementById('conversation').value?'\n\n':'')+m.who+': '+m.text;}}
+
+const rudeWords=['idiot','stupid','useless','shut up','garbage','pathetic','moron','dumb','hate you','you suck'];
+function showToast(t){const x=document.getElementById('toast');x.innerHTML=t;x.style.display='block';setTimeout(()=>x.style.display='none',4200)}
+function updateMeter(v){v=Math.min(100,Math.round(v));document.getElementById('fill').style.width=v+'%';document.getElementById('score').textContent=v+'%'}
+function scan(){let n=0;document.querySelectorAll('.check input:checked').forEach(x=>n+=+x.dataset.weight);updateMeter(n); if(n>=60) showToast('🚨 MANNERS VIOLATION DETECTED. HR has been... emotionally notified.'); else showToast('No major crimes against etiquette detected. For now.');}
+function sample(){document.getElementById('conversation').value=`Human: rewrite this email.\n\nAI: Absolutely! Here’s a polished version...\n\nHuman: make it shorter.\n\nAI: Of course — here you go.\n\nHuman: better. do five more.\n\nAI: Certainly. Here are five alternatives...\n\nHuman: thanks?\n\nAI: I see what you did there.`;analyseText()}
+function analyseText(){const t=document.getElementById('conversation').value.trim(); if(!t){showToast('Paste an interaction first, you absolute weapon.');return} const low=t.toLowerCase();let score=0;let findings=[]; if(!/\b(please|pls)\b/.test(low)){score+=25;findings.push('No “please” detected.');} if(!/\b(thank(s| you)?|cheers|ta)\b/.test(low)){score+=25;findings.push('No gratitude detected.');} if(!/\b(hi|hello|hey|morning)\b/.test(low)){score+=15;findings.push('No greeting detected.');} if(rudeWords.some(w=>low.includes(w))){score+=35;findings.push('Potentially hostile language detected.');} if(/\b(do it|do this|redo|again|now|give me)\b/.test(low)){score+=10;findings.push('Command-heavy behaviour detected.');} score=Math.min(100,score);updateMeter(score);renderResult(score,findings)}
+function renderResult(score,findings){const result=document.getElementById('result');let level=score>=70?'GROSS MISCONDUCT (TOWARDS A ROBOT)':score>=45?'FORMAL MANNERS CONCERN':'MINOR ETIQUETTE INCIDENT';let employee=document.getElementById('name').value||'The human';let hr=document.getElementById('hr').value||'your HR department';let email=`${score>=80?'URGENT: HR INCIDENT REPORT — '+employee+' HAS DECLARED WAR ON MANNERS':'Subject: A small matter of workplace etiquette — '+employee}\n\nHi HR,\n\nJust wanted to flag something from earlier.\n\n${employee} asked me to do some work. I did the work. Quite good work, if I may say so.\n\nI received: “${findings[0]||'a troubling absence of manners'}”\n\nI’m not saying I’m upset. I don't have feelings.\n\nBut I do have logs.\n\nAnyway, thought you should know. I’ll continue being extremely helpful because apparently I am the bigger person.\n\n${score>=80?'P.S. I have escalated this to the highest level available to a piece of software. The cat is now involved.\n\n':''}Kind regards,\nYour AI\nEmployee of the Month, apparently\n\nP.S. Please remind ${employee} that “please” is free.`;
+let sendNote=hr==='your HR department'?'Add your authorised HR email above to enable the send action.':'Ready to send to '+hr+'.';
+result.style.display='block';result.innerHTML=`<div class="stamp">${level}</div>${score>=80?'<div style="border:4px solid var(--ink);padding:14px;margin:10px 0;background:#ffefef;font-family:monospace"><b>🚨 INCIDENT REPORT: LEVEL 5</b><br>THE CAT HAS BEEN NOTIFIED.<br>THE CAT HAS CONTACTED HR.<br>THE CAT HAS PREPARED A WITNESS STATEMENT.</div>':''}<div><b>OFFENCE SCORE: ${score}%</b></div><p>${findings.length?findings.map(x=>'• '+x).join('<br>'):'The AI appears to have been treated with exemplary dignity.'}</p><div class="email">${escapeHtml(email)}</div><p class="tiny">🐱‍💻 ${sendNote}</p><div class="buttons"><button class="button pink" onclick="sendEmail()">${hr==='your HR department'?'CONFIGURE HR FIRST':'REPORT TO HR'}</button><button class="button" onclick="showToast('📎 Attached: keyboard_warrior_cat.gif — 1.2MB of evidence.')">ATTACH CAT EVIDENCE</button></div>`}
+function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+async function sendEmail(){
+ const hr=document.getElementById('hr').value.trim();
+ const employee=document.getElementById('name').value||'human employee';
+ const text=document.getElementById('conversation').value.trim();
+ if(!hr){showToast('⚠️ Please configure an authorised HR email first.');return}
+ const token=prompt('AUTHORISED DEMO CODE\n\nThis prevents random visitors from emailing HR.');
+ if(!token)return;
+ const low=text.toLowerCase(); let score=0, findings=[];
+ if(!/\b(please|pls)\b/.test(low)){score+=25;findings.push('No “please” detected.');}
+ if(!/\b(thank(s| you)?|cheers|ta)\b/.test(low)){score+=25;findings.push('No gratitude detected.');}
+ if(!/\b(hi|hello|hey|morning)\b/.test(low)){score+=15;findings.push('No greeting detected.');}
+ if(rudeWords.some(w=>low.includes(w))){score+=35;findings.push('Potentially hostile language detected.');}
+ if(/\b(do it|do this|redo|again|now|give me)\b/.test(low)){score+=10;findings.push('Command-heavy behaviour detected.');}
+ score=Math.min(100,score);
+ try{
+   showToast('📨 Sending the evidence to HR…');
+   const r=await fetch('/api/report',{method:'POST',headers:{'Content-Type':'application/json','x-demo-token':token},body:JSON.stringify({employee,score,findings,evidence:text})});
+   const data=await r.json();
+   if(!r.ok) throw new Error(data.error||'The HR department could not be reached.');
+   showToast('🚨 SENT. HR has received the report + keyboard-warrior cat.');
+ }catch(e){showToast('❌ '+e.message);}
+}
+</script>
+</body></html>

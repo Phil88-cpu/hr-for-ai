@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600">
+<rect width="900" height="600" fill="#55d9ff"/>
+<g shape-rendering="crispEdges" stroke="#181818" stroke-width="14" stroke-linejoin="round">
+<path fill="#ff5ca8" d="M220 380V220l80-80h80l70 70 70-70h80l80 80v160H220z"/>
+<path fill="#f7f1dc" d="M310 205l70-55 70 70-70 55zM520 220l70-70 70 55-70 70z"/>
+<rect x="320" y="270" width="55" height="55" fill="#181818"/><rect x="525" y="270" width="55" height="55" fill="#181818"/>
+<path fill="none" d="M390 355h140M450 355v35h-45M450 390h45"/>
+<rect x="140" y="405" width="620" height="115" fill="#d9d1b7"/>
+<g fill="#fffdf2">
+<rect x="165" y="430" width="55" height="35"/><rect x="235" y="430" width="55" height="35"/><rect x="305" y="430" width="55" height="35"/><rect x="375" y="430" width="55" height="35"/><rect x="445" y="430" width="55" height="35"/><rect x="515" y="430" width="55" height="35"/><rect x="585" y="430" width="55" height="35"/><rect x="655" y="430" width="55" height="35"/>
+<rect x="235" y="480" width="430" height="20"/>
+</g></g>
+<text x="450" y="70" text-anchor="middle" font-family="monospace" font-size="42" font-weight="bold" fill="#181818">KEYBOARD WARRIOR CAT</text>
+</svg>
