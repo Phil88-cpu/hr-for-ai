@@ -62,7 +62,7 @@ app.post('/api/report', async (req,res) => {
   }
 });
 
-app.get('*', (req,res) => res.sendFile(path.join(__dirname,'public','index.html')));
+app.get('/*splat', (req,res) => res.sendFile(path.join(__dirname,'public','index.html')));
 
 function escapeHtml(value='') { return String(value).replace(/[&<>\"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','\\':'&#92;','"':'&quot;'}[c])); }
 app.listen(PORT, () => console.log(`AI HR Department running on ${PORT}`));
